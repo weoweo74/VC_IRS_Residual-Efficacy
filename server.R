@@ -14,8 +14,8 @@ library(V8)
 library(reshape)
 
 #Install devtools
-install.packages("devtools")
 library(devtools)
+install.packages("devtools")
 install_github("shinyGlobe", "trestletech")
 
 attack_freq_country <- readRDS("attack_freq_country.rds")
