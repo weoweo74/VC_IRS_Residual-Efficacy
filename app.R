@@ -20,6 +20,10 @@ library(devtools)
 install.packages("devtools")
 install_github("shinyGlobe", "trestletech")
 
+#install ggmap via devtools
+if(!requireNamespace("devtools")) install.packages("devtools")
+devtools::install_github("dkahle/ggmap")
+
 dashboardPage(skin = "yellow",
               dashboardHeader(title = " Vector Control Malaria",
                               tags$li(class = "dropdown",
