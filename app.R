@@ -1,7 +1,7 @@
 # Create shiny app in one single script togrther for both UI and SERVER
 ########################HERE IS UI.R ######################################################
 library(shiny)
-library(shinyGlobe)
+#library(shinyGlobe)
 library(ggplot2)
 library(dplyr)
 library(ggmap)
