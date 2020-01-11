@@ -27,11 +27,11 @@ library(reshape)
 #install.packages("devtools")                      #
 #install_github("shinyGlobe", "trestletech")       #
 ###################################################
-install.packages("remotes")
-remotes::install_github("trestletech/shinyGlobe", force = TRUE)
+#install.packages("remotes")
+#remotes::install_github("trestletech/shinyGlobe", force = TRUE)
 
-if(!require("devtools")) install.packages("devtools")
-devtools::install_github("bwlewis/rthreejs")
+#if(!require("devtools")) install.packages("devtools")
+#devtools::install_github("bwlewis/rthreejs")
 
 #install ggmap via devtools
 #@if(!requireNamespace("devtools")) install.packages("devtools")
