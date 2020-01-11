@@ -7,6 +7,7 @@ library(ggplot2)
 #library(ggmap)
 library(maptools)
 library(maps)
+install.packages("plotly")
 library(plotly)
 library(shinydashboard)
 library(shinythemes)
@@ -25,9 +26,9 @@ if(!requireNamespace("devtools")) install.packages("devtools")
 devtools::install_github("dkahle/ggmap")
 
 ############WORK VIA GITHUB is below##############
-library(devtools)
-install.packages("plotly")
-devtools::install_github("ropensci/plotly")
+#library(devtools)
+#install.packages("plotly")
+#devtools::install_github("ropensci/plotly")
 
 
 
