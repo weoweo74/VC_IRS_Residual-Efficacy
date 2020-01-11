@@ -608,10 +608,10 @@ dashboardPage(skin = "yellow",
 ########################HERE IS SERVER.R ######################################################
 
 library(shiny)
-library(shinyGlobe)
+#library(shinyGlobe)
 library(ggplot2)
-library(dplyr)
-library(ggmap)
+#library(dplyr)
+#library(ggmap)
 library(maptools)
 library(maps)
 library(plotly)
@@ -622,6 +622,17 @@ library(shinyjs)
 library(V8)
 library(reshape)
 
+library(devtools)
+install.packages("devtools")
+install_github("shinyGlobe", "trestletech")
+
+#install ggmap via devtools
+if(!requireNamespace("devtools")) install.packages("devtools")
+devtools::install_github("dkahle/ggmap")
+
+############WORK VIA GITHUB is below##############
+install.packages("plotly")
+devtools::install_github("ropensci/plotly")
 
 library(devtools)
 install.packages("devtools")
