@@ -26,7 +26,7 @@ devtools::install_github("dkahle/ggmap")
 
 ############WORK VIA GITHUB is below##############
 library(devtools)
-install.packages("devtools")
+install.packages("plotly")
 devtools::install_github("ropensci/plotly")
 
 
