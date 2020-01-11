@@ -22,7 +22,7 @@ library(shinyjs)
 library(V8)
 install.packages("reshape")
 library(reshape)
-##################################################
+###################################################
 #library(devtools)                                 #
 #install.packages("devtools")                      #
 #install_github("shinyGlobe", "trestletech")       #
