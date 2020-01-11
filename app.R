@@ -3,7 +3,7 @@
 library(shiny)
 #library(shinyGlobe)
 library(ggplot2)
-library(dplyr)
+#library(dplyr)
 #library(ggmap)
 library(maptools)
 library(maps)
