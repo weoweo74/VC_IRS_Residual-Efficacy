@@ -1,10 +1,13 @@
 # Create shiny app in one single script togrther for both UI and SERVER
 ########################HERE IS UI.R ######################################################
 library(shiny)
-#library(shinyGlobe)
+install.packages("shinyGlobe")
+library(shinyGlobe)
 library(ggplot2)
-#library(dplyr)
-#library(ggmap)
+install.packages("dplyr")
+library(dplyr)
+install.packages("ggmap")
+library(ggmap)
 library(maptools)
 library(maps)
 install.packages("plotly")
@@ -20,13 +23,13 @@ library(V8)
 install.packages("reshape")
 library(reshape)
 
-library(devtools)
-install.packages("devtools")
-install_github("shinyGlobe", "trestletech")
+#library(devtools)
+#install.packages("devtools")
+#install_github("shinyGlobe", "trestletech")
 
 #install ggmap via devtools
-if(!requireNamespace("devtools")) install.packages("devtools")
-devtools::install_github("dkahle/ggmap")
+@if(!requireNamespace("devtools")) install.packages("devtools")
+#devtools::install_github("dkahle/ggmap")
 
 ############WORK VIA GITHUB is below##############
 #library(devtools)
