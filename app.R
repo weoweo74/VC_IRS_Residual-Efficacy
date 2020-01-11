@@ -17,6 +17,7 @@ library(DT)
 library(leaflet)
 library(shinyjs)
 library(V8)
+install.packages("reshape")
 library(reshape)
 
 library(devtools)
