@@ -22,10 +22,13 @@ library(shinyjs)
 library(V8)
 install.packages("reshape")
 library(reshape)
-
-library(devtools)
-install.packages("devtools")
-install_github("shinyGlobe", "trestletech")
+##################################################
+#library(devtools)                                 #
+#install.packages("devtools")                      #
+#install_github("shinyGlobe", "trestletech")       #
+###################################################
+install.packages("remotes")
+remotes::install_github("trestletech/shinyGlobe")
 
 #install ggmap via devtools
 #@if(!requireNamespace("devtools")) install.packages("devtools")
