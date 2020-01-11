@@ -25,10 +25,9 @@ if(!requireNamespace("devtools")) install.packages("devtools")
 devtools::install_github("dkahle/ggmap")
 
 ############WORK VIA GITHUB is below##############
+install.packages("plotly")
+devtools::install_github("ropensci/plotly")
 
-install.packages("devtools")
-library(devtools)
-install_github("plotly", "ropensci")
 
 dashboardPage(skin = "yellow",
               dashboardHeader(title = " Vector Control Malaria",
