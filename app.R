@@ -28,7 +28,7 @@ library(reshape)
 #install_github("shinyGlobe", "trestletech")
 
 #install ggmap via devtools
-@if(!requireNamespace("devtools")) install.packages("devtools")
+#@if(!requireNamespace("devtools")) install.packages("devtools")
 #devtools::install_github("dkahle/ggmap")
 
 ############WORK VIA GITHUB is below##############
