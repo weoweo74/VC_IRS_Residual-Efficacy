@@ -24,6 +24,12 @@ install_github("shinyGlobe", "trestletech")
 if(!requireNamespace("devtools")) install.packages("devtools")
 devtools::install_github("dkahle/ggmap")
 
+############WORK VIA GITHUB is below##############
+
+install.packages("devtools")
+library(devtools)
+install_github("plotly", "ropensci")
+
 dashboardPage(skin = "yellow",
               dashboardHeader(title = " Vector Control Malaria",
                               tags$li(class = "dropdown",
