@@ -27,6 +27,7 @@ library(shinyjs)
 library(V8)
 install.packages("reshape")
 library(reshape)
+library(tidyr)
 ###################################################
 #library(devtools)                                 #
 #install.packages("devtools")                      #
