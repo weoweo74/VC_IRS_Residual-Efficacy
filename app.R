@@ -33,8 +33,9 @@ library(tidyr)
 #install.packages("devtools")                      #
 # install_github("shinyGlobe", "trestletech")       #
 ###################################################
- #RUN R -e "install.packages('shinyGlobe')"
- #RUN R -e "devtools::install_github("trestletech/shinyGlobe", force = TRUE)"
+library(devtools) 
+install.packages('shinyGlobe')
+ devtools::install_github("trestletech/shinyGlobe", force = TRUE)"
  #library(shinyGlobe)
 ###################################################
 #install.packages("remotes")
