@@ -1017,6 +1017,111 @@ shinyServer(function(input, output, session) {
     return(dat1) })
   
   
+  
+  
+  output$globe <- renderGlobe({
+    terror <- readRDS("terror.rds")
+    
+    terror})
+  
+  
+  output$levelQueryUi <- renderUI({
+    radioButtons("analysisLevel", label = "Level of Analysis",
+                 choices = list("Region" = 1, "Country" = 2), 
+                 selected = 1)
+  })
+  
+  output$timeplot <- renderUI({
+    radioButtons("plotby", label = "Time-series By",
+                 choices = list("IRS" = 1, "ITN" = 2, "Case_Mgt" = 3), 
+                 selected = 1)
+  })
+  
+  output$regionlist <- renderUI({
+    region_name <- readRDS("region_name.rds")
+    selectInput("byregion", label = "Region:", choices = c(Choose='', as.character(region_name)), selected = "North America", selectize = FALSE)
+  })
+  
+  output$countrylist <- renderUI({
+    country_name <- readRDS("country_name.rds")
+    selectInput("bycountry", label = "Country:", choices = c(Choose='', as.character(country_name)), selected = "United States", selectize = FALSE)
+  })
+  
+  
+  
+  
+  
+  output$totAttacks_country <- renderValueBox({
+    
+    country_data <- country_data()
+    
+    country_no_attack <- nrow(country_data)
+    valueBox(country_no_attack,"Total IRS Population",icon = icon("globe"), color = 'red') })
+  
+  output$totloss_country <- renderValueBox({
+    
+    
+    country_data <- country_data()
+    country_finance_loss <- convert_to_word(sum(country_data$propvalue, na.rm = TRUE))
+    #country_life_loss <- sum(country_data$nkill, na.rm = TRUE)
+    valueBox(paste("$",country_finance_loss,sep = ""),"Total Intervention Cost",icon = icon("bank"), color = 'purple') })
+  
+  output$totlife_country <- renderValueBox({
+    
+    country_data <- country_data()
+    country_life_loss <- sum(country_data$nkill, na.rm = TRUE)
+    valueBox(country_life_loss,"Total ITN Distributed",icon = icon("user"), color = 'blue') })
+  
+  
+  output$totcity_country <- renderValueBox({
+    
+    country_data <- country_data()
+    country_city <- length(unique(country_data$city, na.rm = TRUE))
+    valueBox(country_city,"Cities Covered",icon = icon("flag-o"), color = 'green') })
+  
+  
+  output$Design <- renderText({
+    if (input$analysisLevel == 1) {
+      name = paste(input$byregion)
+    } else {
+      name = paste(input$bycountry)
+    }
+    name
+  })
+  
+  output$tseries <- renderText({
+    if (input$plotby == 1) {
+      name = paste("Time-series by IRS")
+    } 
+    if (input$plotby == 2) {
+      name = paste("Time-series by ITN")
+    }
+    if (input$plotby == 3) {
+      name = paste("Time-series by Case_Mgt")
+    }
+    name
+  })
+  
+  
+  output$country_map <- renderLeaflet({
+    
+    
+    country_data <- country_data()
+    country_data <- country_data[complete.cases(country_data$latitude),]
+    country_data <- country_data[complete.cases(country_data$nkill),]
+    country_data <- country_data[country_data$nkill > 0, ]
+    country_data$sqrt <- log(country_data$nkill)
+    
+    
+    
+    m1 = leaflet(country_data) %>% addProviderTiles("CartoDB.DarkMatterNoLabels", options= providerTileOptions(opacity = 0.7)) 
+    
+    pal <- colorNumeric(palette = "YlOrRd", domain = country_data$sqrt)
+    m1 %>% addCircleMarkers(radius = 2, color = ~pal(sqrt),popup = ~paste(paste0("Fatalities: ", nkill),paste0("City: ", city),
+                                                                          paste0("Date: ", date), sep = '<br />')
+                            , opacity = 0.9)
+    
+   
     
   })
 })
