@@ -33,8 +33,6 @@ library(tidyr)
 #install.packages("devtools")                      #
 # install_github("shinyGlobe", "trestletech")       #
 ###################################################
-library(devtools) 
-install.packages('shinyGlobe')
  devtools::install_github("trestletech/shinyGlobe", force = TRUE)"
  #library(shinyGlobe)
 ###################################################
