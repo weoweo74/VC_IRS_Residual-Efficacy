@@ -36,7 +36,7 @@ library(tidyr)
 library(devtools)
 install_git("https://github.com/trestletech/shinyGlobe")
 library(devtools)
-https://github.com/trestletech/shinyRGL("https://github.com/trestletech/shinyRGL")
+install_git("https://github.com/trestletech/shinyRGL")
 #install_github("shinyRGL", "trestletech")
 #install_github("rgl", "trestletech", "js-class")
 ###################################################
