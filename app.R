@@ -2,7 +2,8 @@
 ########################HERE IS UI.R ######################################################
 library(shiny)
 install.packages("shinyGlobe")
-library(shinyGlobe)
+devtools::install_github("trestletech/shinyGlobe", force = TRUE)
+#library(shinyGlobe)
 library(ggplot2)
 #install.packages("dplyr")
 #library(dplyr)
