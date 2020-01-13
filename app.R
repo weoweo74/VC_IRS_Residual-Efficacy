@@ -31,6 +31,9 @@ library(devtools)                                 #
 install.packages("devtools")                      #
 install_github("shinyGlobe", "trestletech")       #
 ###################################################
+RUN R -e "install.packages('shinyGlobe')"
+RUN R -e "devtools::install_github('shinyGlobe/trestletech')"
+###################################################
 install.packages("remotes")
 remotes::install_github("trestletech/shinyGlobe", force = TRUE)
 
