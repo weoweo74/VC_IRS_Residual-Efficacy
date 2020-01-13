@@ -1,8 +1,8 @@
 # Create shiny app in one single script togrther for both UI and SERVER
 ########################HERE IS UI.R ######################################################
 library(shiny)
-install.packages("shinyGlobe")
-devtools::install_github("trestletech/shinyGlobe", force = TRUE)
+#install.packages("shinyGlobe")
+#devtools::install_github("trestletech/shinyGlobe", force = TRUE)
 #library(shinyGlobe)
 library(ggplot2)
 #install.packages("dplyr")
@@ -32,8 +32,9 @@ library(reshape)
 #install.packages("devtools")                      #
 # install_github("shinyGlobe", "trestletech")       #
 ###################################################
- # RUN R -e "install.packages('shinyGlobe')"
- # RUN R -e "devtools::install_github("trestletech/shinyGlobe", force = TRUE)
+ RUN R -e "install.packages('shinyGlobe')"
+ RUN R -e "devtools::install_github("trestletech/shinyGlobe", force = TRUE)"
+ library(shinyGlobe)
 ###################################################
 #install.packages("remotes")
 # remotes::install_github("trestletech/shinyGlobe", force = TRUE)
