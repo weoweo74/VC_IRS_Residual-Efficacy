@@ -34,7 +34,7 @@ library(reshape)
 ###################################################
  RUN R -e "install.packages('shinyGlobe')"
  RUN R -e "devtools::install_github("trestletech/shinyGlobe", force = TRUE)"
- library(shinyGlobe)
+ #library(shinyGlobe)
 ###################################################
 #install.packages("remotes")
 # remotes::install_github("trestletech/shinyGlobe", force = TRUE)
