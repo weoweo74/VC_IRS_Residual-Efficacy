@@ -35,6 +35,7 @@ library(tidyr)
 ###################################################
 library(devtools)
 install_git("https://github.com/trestletech/shinyGlobe")
+install_github("rgl", "trestletech", "js-class")
 ###################################################
 #install.packages("remotes")
 # remotes::install_github("trestletech/shinyGlobe", force = TRUE)
