@@ -1,18 +1,46 @@
-# Vector Control Interventions Indicators for Malaria Control Program by PMI:
-Adm1:   Country 	Adm2; Region	Adm3: District	Indicator	Unit of Measure	Numerator 	Denominator	Frequency 	Visual Level	Data Source 	Intervention	Comments for Visualizaiton
-Country 	Region	 District	Number of structures sprayed 	Count	Spray- Structures sprayed (Details)	1	Annual	District 	VL Collect DHIS	IRS	Dropdown by Country; by  Region, District;  Trend by Period/Freq.: annual, monthly ; UID for ISOName & DHIS_OrgUID
-Country 	Region	 District	Spray- Structures found (Details)	Count	Spray- Structures found (Details)	1	Annual	District 	VL Collect DHIS	IRS	Dropdown by Country; by  Region, District;  Trend by Period/Freq.: annual, monthly ; UID for ISOName & DHIS_OrgUID
-Country 	Region	 District	IRS Coverage rate 	%	Spray- Structures sprayed (Details)	Spray- Structures found (Details)	Annual	District 	VL Collect DHIS	IRS	Dropdown by Country; by  Region, District;  Trend by Period/Freq.: annual, monthly ; UID for ISOName & DHIS_OrgUID
-Country 	Region	 District	Rainfall average (mm) during the timing of IRS Campaign	Count	Rainfall average (mm) 	1	Monthly 	District 	CHIRPS 	IRS	Can only be visualize seperately
-Country 	Region	 District	IRS population protected	Count	Number of people residing in sprayed structures	1	Annual	District 	VL Collect DHIS	IRS	Dropdown by Country; by  Region, District;  Trend by Period/Freq.: annual, monthly ; UID for ISOName & DHIS_OrgUID
-Country 	Region	 District	IRS population protection rate	%	Population Protected	Total population of the district	Annual	District 	VL Collect DHIS	IRS	Dropdown by Country; by  Region, District;  Trend by Period/Freq.: annual, monthly ; UID for ISOName & DHIS_OrgUID
-Country 	Region	 District	Spray- Children <5 years old protected (Totals)	Count	Spray- Children <5 years old protected (Totals)	1	Annual	District 	VL Collect DHIS	IRS	Dropdown by Country; by  Region, District;  Trend by Period/Freq.: annual, monthly ; UID for ISOName & DHIS_OrgUID
-Country 	Region	 District	Children <5 yrs sleeping under nets by protection rate 	%	Spray-Children <5 years old sleeping under nets (Totals)	Spray- Children <5 years old protected (Totals)	Annual	District 	VL Collect DHIS	IRS	Dropdown by Country; by  Region, District;  Trend by Period/Freq.: annual, monthly ; UID for ISOName & DHIS_OrgUID
-Country 	Region	 District	 Pregnant  women sleeping under nets by protection rate 		Spray- Pregnant women sleeping under nets (Totals)	Spray- Pregnant women protected (Totals)	Annual	District 	VL Collect DHIS	IRS	Dropdown by Country; by  Region, District;  Trend by Period/Freq.: annual, monthly ; UID for ISOName & DHIS_OrgUID
-Country 	Region	 District	Percentage of household sprayed by number of nets distributed 	%	Number of sprayed household/structure	Number of net distributed	Annual	District 	VL Collect DHIS	IRS/ITN	Dropdown by Country; by  Region, District;  Trend by Period/Freq.: annual, monthly ; UID for ISOName & DHIS_OrgUID
-Country 	Region	 District	Number of Malaria confirmed cases in location of maintained IRS spray in the last 2yrs( more than once)	Ratio	Number of Malaria confirmed cases in the last 2 yrs 	 IRS spray has been maintained in the last 2yrs(  sprayed more than once) : Multiple-Spray	Annual	District 	Malaria Quarterly Report 	Case Mgt/IRS	Micheal & Lungi input here 
-Country 	Region	 District	Number of Malaria confirmed cases in location of newly IRS spray in the last 6 months (once)	Ratio	Number of Malaria confirmed cases in the last  6 months 	 IRS spray once in the last 6 months: Single-Spray	Annual	District 	Malaria Quarterly Report 	Case Mgt/IRS	Micheal & Lungi input here 
-Country 	Region	 District	Number of Malaria confirmed cases in location that never had IRS spray at all	Ratio	Number of Malaria confirmed cases in the last  6 months 	 No IRS spray ever done : No-Spray	Annual	District 	Malaria Quarterly Report 	Case Mgt/IRS	Micheal & Lungi input here 
-Country 	Region	 District	Number of confirmed cases 	Count	Number of confirmed cases 	1	Monthly 	District 	Malaria Quarterly Report 	Case Mgt	Dropdown by Country; by  Region, District;  Trend by Period/Freq.: annual, monthly ; UID for ISOName & DHIS_OrgUID
-Country 	Region	 District	Number of suspected cases	Count	Number of suspected cases	1	Monthly 	District 	Malaria Quarterly Report 	Case Mgt	Dropdown by Country; by  Region, District;  Trend by Period/Freq.: annual, monthly ; UID for ISOName & DHIS_OrgUID
-Country 	Region	 District	Number of deaths	Count	Number of death cases	1	Monthly 	District 	Malaria Quarterly Report 	Case Mgt	Dropdown by Country; by  Region, District;  Trend by Period/Freq.: annual, monthly ; UID for ISOName & DHIS_OrgUID
+###  Purpose
+
+**
+Vector-Control Intervention Malaria Dashboard: Quarterly** is a **Shiny** web application that allows users to interact and monitor PMI interventions to reduce the burden of Malaria ** Vector-Control Intervention   ** This dasboard shows key interventions carried out over years in the area of Indoor Residual Spraying, Insecticide Treated Mossquito Net and Entomological Resistance Efficacy.
+
+Vector-Control Intervention Malaria dashboard is an interactive visualization tools to monitor, manage and guide informed decision making on malaria interventions ranging from Indoor Residual Spraying (IRS), Insecticides Treated Nets (ITN), Case Management and Entomological data. This visualization tool can be used continously to track the future goal of Global Malaria Strategy.
+
+
+
+
+###  Structure
+
+The 'Application' page is comprised of two main sections:
+
+- 'Dashboard' per vector control interventions' where explaination and definitions for key indicators can be seen.
+- 'Data Overview' per vector control interventions' where the user select a single country for viewing key indicators performance.
+
+
+
+### Dependencies
+
+
+**MAP-district-comparison** has been developed using **R** and **Shiny** and is dependent on the following software and **R** packages:
+
+
+|  |   |
+--- | ----
+**Software**   | 
+R  | Language and environment for statistical computing and graphics
+**R packages** |
+shiny | Web Application Framework for R
+shinyGlobe | shinyGlobe palettes
+dplyr | dplyr
+shinydashboard | shinydashboard
+ggmap | ggmap: ggmap
+map | map
+maptools | maptools
+shinythemes | Themes for Shinys
+shinycssloaders | shinycssloaders
+ggplot2 | ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics
+shinyjs | shinyjs
+V8 | A package providing classes and methods for spatial data: points, lines, polygons and grids
+reshape | The R Graphics Devices and Support for Colours and Fontsshiny
+plotly | plotly
+DT | The R Graphics Devices DT
+leaflet | This R package makes it easy to integrate and control Leaflet maps in R.
