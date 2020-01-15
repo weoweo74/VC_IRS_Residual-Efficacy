@@ -58,7 +58,7 @@ devtools::install_github("bwlewis/rthreejs")
 
 
 
-dashboardPage(skin = "yellow",
+ui <- dashboardPage(skin = "yellow",
               dashboardHeader(title = " Vector Control Malaria",
                               tags$li(class = "dropdown",
                                       tags$a(href = "https://www.facebook.com/USAIDGH/", 
@@ -667,7 +667,7 @@ convert_to_word <- function(x) {
 
 
 
-shinyServer(function(input, output, session) {
+server <- function(input, output, session) {
   
   country_data <- reactive({
     if (input$analysisLevel == 1) {
@@ -1127,6 +1127,6 @@ shinyServer(function(input, output, session) {
    
     
   })
-})
+}
 
 shinyApp(ui, server)
